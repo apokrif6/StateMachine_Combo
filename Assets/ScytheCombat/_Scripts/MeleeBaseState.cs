@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class MeleeBaseState: State
+public class MeleeBaseState : State
 {
     public float duration;
     

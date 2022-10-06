@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GroundEntryState: MeleeBaseState
+public class GroundEntryState : MeleeBaseState
 {
     public override void OnEnter(StateMachine _stateMachine)
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class ComboCharacter: MonoBehaviour
+public class ComboCharacter : MonoBehaviour
 {
     private StateMachine _stateMachine;
 
@@ -9,16 +9,14 @@ public class ComboCharacter: MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(GetComponent<StateMachine>());
-
         _stateMachine = GetComponent<StateMachine>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _stateMachine.currentState.GetType() == typeof(IdleCombatState))
+        /*if (Input.GetMouseButton(0) && _stateMachine.currentState.GetType() == typeof(IdleCombatState))
         {
             _stateMachine.SetNextState(new GroundEntryState());
-        }
+        }*/
     }
 }
