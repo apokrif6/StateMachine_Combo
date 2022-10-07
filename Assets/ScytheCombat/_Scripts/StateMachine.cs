@@ -15,6 +15,26 @@ public class StateMachine: MonoBehaviour
         SetNextStateToMain();
     }
 
+    private void OnValidate()
+    {
+        if (_mainState != null) return;
+        
+        if (customName == "Combat")
+        {
+            _mainState = new IdleCombatState();
+        }
+    }
+    
+    public void SetNextStateToMain()
+    {
+        _nextState = _mainState;
+    }
+    
+    private void FixedUpdate()
+    {
+        currentState?.OnFixedUpdate();
+    }
+    
     public void Update()
     {
         if (_nextState != null)
@@ -40,21 +60,6 @@ public class StateMachine: MonoBehaviour
         if (newState != null)
         {
             _nextState = newState;
-        }
-    }
-
-    public void SetNextStateToMain()
-    {
-        _nextState = _mainState;
-    }
-
-    private void OnValidate()
-    {
-        if (_mainState != null) return;
-        
-        if (customName == "Combat")
-        {
-            _mainState = new IdleCombatState();
         }
     }
 }

@@ -17,7 +17,7 @@ public class GroundComboState: MeleeBaseState
     {
         base.OnUpdate();
 
-        if (Time.fixedTime >= duration)
+        if (Fixedtime >= duration)
         {
             if (shouldCombo)
             {

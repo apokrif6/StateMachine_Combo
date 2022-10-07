@@ -17,7 +17,7 @@ public class GroundFinisherState: MeleeBaseState
     {
         base.OnUpdate();
 
-        if (Time.fixedTime >= duration)
+        if (Fixedtime >= duration)
         {
             stateMachine.SetNextStateToMain();
         }

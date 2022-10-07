@@ -6,7 +6,8 @@ public class ComboCharacter : MonoBehaviour
     private StateMachine _stateMachine;
 
     [SerializeField] public Collider hitbox;
-
+    [SerializeField] public GameObject hiteffect;
+    
     private void Start()
     {
         _stateMachine = GetComponent<StateMachine>();
@@ -14,9 +15,9 @@ public class ComboCharacter : MonoBehaviour
 
     private void Update()
     {
-        /*if (Input.GetMouseButton(0) && _stateMachine.currentState.GetType() == typeof(IdleCombatState))
+        if (Input.GetMouseButtonDown(0) && _stateMachine.currentState.GetType() == typeof(IdleCombatState))
         {
             _stateMachine.SetNextState(new GroundEntryState());
-        }*/
+        }
     }
 }

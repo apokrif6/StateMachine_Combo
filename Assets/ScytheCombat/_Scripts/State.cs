@@ -4,6 +4,9 @@ public abstract class State
 {
     protected StateMachine stateMachine;
     
+    protected float Fixedtime { get; set; }
+
+    
     public virtual void OnEnter(StateMachine _stateMachine)
     {
         stateMachine = _stateMachine;
@@ -12,6 +15,11 @@ public abstract class State
     public virtual void OnUpdate()
     {
         
+    }
+
+    public void OnFixedUpdate()
+    {
+        Fixedtime += Time.deltaTime;
     }
 
     public virtual void OnExit()
