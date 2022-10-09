@@ -4,10 +4,6 @@ using UnityEngine;
 public class ComboCharacter : MonoBehaviour
 {
     private StateMachine _stateMachine;
-
-    [SerializeField] public Collider hitbox;
-    [SerializeField] public GameObject hiteffect;
-    
     private void Start()
     {
         _stateMachine = GetComponent<StateMachine>();
